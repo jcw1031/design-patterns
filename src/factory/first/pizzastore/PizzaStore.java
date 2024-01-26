@@ -1,4 +1,4 @@
-package factory.first;
+package factory.first.pizzastore;
 
 import factory.first.pizza.Pizza;
 
@@ -10,12 +10,14 @@ public class PizzaStore {
         this.simplePizzaFactory = simplePizzaFactory;
     }
 
-    public void orderPizza(String type) {
+    public Pizza orderPizza(String type) {
         Pizza pizza = simplePizzaFactory.createPizza(type);
 
         pizza.prepare();
         pizza.bake();
         pizza.cut();
         pizza.box();
+
+        return pizza;
     }
 }

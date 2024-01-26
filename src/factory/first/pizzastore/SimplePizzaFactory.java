@@ -1,4 +1,4 @@
-package factory.first;
+package factory.first.pizzastore;
 
 import factory.first.pizza.CheesePizza;
 import factory.first.pizza.PepperoniPizza;

@@ -1,20 +1,12 @@
 package factory.first.pizza;
 
-public abstract class Pizza {
+public interface Pizza {
 
-    public void prepare() {
-        System.out.println("Pizza.prepare");
-    }
+    void prepare();
 
-    public void bake() {
-        System.out.println("Pizza.bake");
-    }
+    void bake();
 
-    public void cut() {
-        System.out.println("Pizza.cut");
-    }
+    void cut();
 
-    public void box() {
-        System.out.println("Pizza.box");
-    }
+    void box();
 }
