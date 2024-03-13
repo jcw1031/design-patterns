@@ -3,6 +3,7 @@ package command;
 import command.command.Command;
 import command.command.LightOffCommand;
 import command.command.LightOnCommand;
+import command.command.MacroCommand;
 import command.receiver.Light;
 
 public class RemoteLoader {
@@ -31,5 +32,13 @@ public class RemoteLoader {
         remoteController.pushOffButton(2);
 
         System.out.println("remoteController = " + remoteController);
+
+        Command[] onCommands = {livingRoomLightOn, kitchenLightOn};
+        Command[] offCommands = {livingRoomLightOff, kitchenLightOff};
+        MacroCommand onMacroCommand = new MacroCommand(onCommands);
+        MacroCommand offMacroCommand = new MacroCommand(offCommands);
+
+        onMacroCommand.execute();
+        offMacroCommand.execute();
     }
 }
