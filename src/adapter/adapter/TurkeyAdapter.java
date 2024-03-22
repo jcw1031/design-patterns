@@ -1,23 +1,25 @@
 package adapter.adapter;
 
-import adapter.Duck;
-import adapter.Turkey;
+import adapter.duck.Duck;
+import adapter.turkey.Turkey;
 
-public class TurkeyAdapter implements Turkey {
+public class TurkeyAdapter implements Duck {
 
-    private Duck duck;
+    private Turkey turkey;
 
-    public TurkeyAdapter(Duck duck) {
-        this.duck = duck;
+    public TurkeyAdapter(Turkey turkey) {
+        this.turkey = turkey;
     }
 
     @Override
-    public void gobble() {
-        duck.quack();
+    public void quack() {
+        turkey.gobble();
     }
 
     @Override
     public void fly() {
-        
+        for (int i = 0; i < 5; i++) {
+            turkey.fly();
+        }
     }
 }
